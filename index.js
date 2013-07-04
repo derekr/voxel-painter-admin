@@ -18,7 +18,7 @@ function renderCritters (critters) {
     document.querySelector('body').addEventListener('click', function (e) {
         if (e.target.className === 'btn-delete') {
             var id = e.target.attributes['data-id'].textContent;
-            var key = e.target.attributes['data-id'].textContent;
+            var key = e.target.attributes['data-key'].textContent;
             console.log('remove: ', id, key);
             // handle deleting?
         }
