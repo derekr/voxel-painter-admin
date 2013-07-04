@@ -1,0 +1,15 @@
+{
+  "name": "voxel-painter-admin",
+  "version": "0.0.1",
+  "dependencies": {
+    "browser-request": "~0.2.1",
+    "handlebars": "1.0.12"
+  },
+  "devDependencies": {
+    "browserify": "2.22.0",
+    "beefy": "0.4.0"
+  },
+  "scripts": {
+    "start": "beefy index.js:bundle.js 8080"
+  }
+}

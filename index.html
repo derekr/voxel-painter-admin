@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Voxel Painter Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+
+    <div id="critters-wrapper"></div>
+    
+    <script id="critters-list-template" type="text/x-handlebars-template">
+        <ul class="critters-list">
+            {{#each critters}}
+                <li class="critter-item">
+                    <a href="{{link}}">
+                        <img src="{{link}}" class="critter-img">
+                    </a>
+                    <p>{{name}}</p>
+                    <button class="btn-delete" data-id="{{id}}" data-key="{{key}}">Remove</button>
+                <!-- </li> -->
+            {{/each}}
+        </ul>
+    </script>
+
+    <script type="text/javascript" src="/handlebars.js"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
+    <script type="text/javascript">
+        console.log('index.html');
+    </script>
+</body>
+</html>

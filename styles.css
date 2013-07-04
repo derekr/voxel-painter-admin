@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+#critters-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.critter-img {
+    max-width: 100%;
+}
+
+.critter-item {
+    width: 50%;
+    display: inline-block;
+    border-bottom: 4px solid #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.btn-delete {
+    cursor: pointer;
+}
