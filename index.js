@@ -8,7 +8,12 @@ request.couch({
     method: 'GET',
     url: 'http://maxcors.jit.su/http://max.ic.ht/critters/_all_docs?include_docs=true'
 }, function (err, res, body) {
-    renderCritters(createCritter(body.rows));
+    var critters = []
+    body.rows.map(function(row) {
+      if (row.id.match(/^_design/)) return
+      critters.push(row)
+    })
+    renderCritters(createCritter(critters));
 });
 
 function deleteCritters(docs) {
@@ -22,7 +27,7 @@ function deleteCritters(docs) {
 
 function renderCritters (critters) {
     var wrapper = document.getElementById('critters-wrapper');
-
+    
     wrapper.innerHTML = renderCrittersList({'critters': critters});
     document.querySelector('body').addEventListener('click', function (e) {
         if (e.target.className === 'btn-delete') {
