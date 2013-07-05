@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
+  
+    <button class="btn-delete">Output Bulk Delete Command To JS Console</button>
 
     <div id="critters-wrapper"></div>
     
@@ -18,13 +20,12 @@
                         <img src="{{link}}" class="critter-img">
                     </a>
                     <p>{{name}}</p>
-                    <button class="btn-delete" data-id="{{id}}" data-key="{{key}}">Remove</button>
+                    Select: <input type="checkbox" data-id="{{id}}" data-rev="{{rev}}"></input>
                 <!-- </li> -->
             {{/each}}
         </ul>
     </script>
 
-    <script type="text/javascript" src="/handlebars.js"></script>
     <script type="text/javascript" src="/bundle.js"></script>
     <script type="text/javascript">
         console.log('index.html');
